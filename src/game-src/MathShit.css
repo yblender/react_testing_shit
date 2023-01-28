@@ -1,0 +1,40 @@
+.hidden{
+    display: none;
+}
+.fade-in{
+    animation: fadeIn 5s;
+}
+@keyframes fadeIn{
+    0%{opacity: 0;}
+    100%{opacity: 100;} 
+}
+.fade-out{
+    animation:fadeOut 2s;
+    animation-fill-mode: forwards;
+}
+@keyframes fadeOut {
+    0%{opacity: 100;}
+    100%{opacity: 0;} 
+}
+.top-row{
+    text-align: center;
+    padding: 1em;
+    margin: 1em;
+    background-color: yellow;
+    border-radius: 15px;
+}
+.bot-row{
+    text-align: center;
+    padding: 1em;
+    margin: 1em;
+    border-radius: 15px;
+}
+.bot-row:hover{
+    background-color: aqua;
+    cursor: pointer;
+}
+.game{
+    width: 20em;
+    text-align: center;
+    margin: auto;
+}

@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Menu from './Menu';
+import Game from './Game';
 
 function App(props : any) {
   var myName = "poopy"
   const [selectedMenu, setCount] = useState("");
     function HandleMenuClick(e : any, ele : any){
-        console.log(e);
         setCount(ele);
     }
     if(selectedMenu == "Test1"){
@@ -18,12 +18,17 @@ function App(props : any) {
         </div>
       );
     }
+    if(selectedMenu == "Game"){
+      return(
+        <Game></Game>
+      )
+    }
     return (
       
       <div className="App">
          <div>
         <a className='Menu-Item' onClick={(e) => HandleMenuClick(e, "Test1")}>test 1</a>|
-        <a className='Menu-Item' onClick={(e) => HandleMenuClick(e, "Test2")}>test 2</a>
+        <a className='Menu-Item' onClick={(e) => HandleMenuClick(e, "Game")}>Play Game</a>
         </div>
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
